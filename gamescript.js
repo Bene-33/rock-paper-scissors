@@ -1,5 +1,5 @@
 const selection = ["rock","paper","scissors"];
-const playerChoice = "RoCk"
+const playerChoice = "scissors"
 const cChoice = computerChoice(selection);
 let pChoice = playerChoice.toLowerCase();
 
