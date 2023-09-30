@@ -1,8 +1,15 @@
 const selection = ["rock","paper","scissors"] 
 
 function computerChoice(selection) {
-    choice = Math.floor(Math.random() * selection.length);
-    return selection[choice];
+    compChoice = Math.floor(Math.random() * selection.length);
+    return selection[compChoice];
 }
 
 console.log(computerChoice(selection))
+
+function playersChoice(word){
+    return word.toLowerCase()
+    
+}
+
+console.log(playersChoice("rock"))
