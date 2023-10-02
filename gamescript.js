@@ -27,10 +27,10 @@ function game(){
                 else if 
                 (computerSelection.substr(1) === "scissors" && playerSelection === "rock"){
                     let result = 0;
-                    playerScore = result++;
+                    playResult = result++;
                     return{
                         message: "you won, rock beats scissors",
-                        score: playerScore,
+                        playerScore: playResult ,
                     };
 
                 }
