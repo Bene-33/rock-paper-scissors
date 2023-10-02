@@ -71,9 +71,11 @@ function game(){
                 }
 
         }
-
+        const getRoundResult = playRound();
+        let roundResult = getRoundResult.message;
 
         console.log(computerSelection, playerSelection)
+        console.log(roundResult)
         console.log(playRound())
         console.log(playerScore)
         console.log(computerScore)
