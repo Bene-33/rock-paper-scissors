@@ -2,12 +2,12 @@ const rounds = 5;
 
 function game(){
 for(let i = 0; i< rounds; i++){
-    const selection = [" rock"," paper"," scissors"];
-    let playerChoice = prompt(`Choose between${selection} and beat the computer`,"")
-    let computerSelection = computerChoice(selection);
+    const selection = [" rock"," paper"," scissors"]; // space to use it with the player prompt 
+    let playerChoice = "rock"; //prompt(`Choose between${selection} and beat the computer`,"")
+    let computerSelection = " scissors"//computerChoice(selection);
     let playerSelection = playerChoice.toLowerCase();
-    let playerScore;
-    let computerScore;
+    let playerScore = 0;
+    let computerScore = 0;
 
     //this function pseudo random select a computer result
     function computerChoice(string) {
@@ -23,6 +23,7 @@ for(let i = 0; i< rounds; i++){
             else if 
             (computerSelection.substr(1) === "scissors" && playerSelection === "rock"){
                 return "you won, rock beats scissors";
+                playerScore++;
                 
             }
             else if (computerSelection.substr(1) === "rock" && playerSelection === "paper"){
@@ -52,7 +53,7 @@ for(let i = 0; i< rounds; i++){
         }
     
 
-console.log(playerSelection, computerSelection)
+console.log(computerSelection, playerSelection)
 console.log(playRound(computerSelection, playerSelection))
 console.log(playerScore)
 console.log(computerScore)
