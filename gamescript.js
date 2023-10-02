@@ -87,17 +87,22 @@ function game(){
     function announceResult(){
         if(i=rounds-1){
             if(playerScore > computerScore){
-                return "you smashed the computer and won"
+                return{
+                    message: "you smashed the computer and won"};
             }
             else if(computerScore > playerScore){
-                return "the computer smashed you and won"
+                return{
+                    message: "the computer smashed you and won"};
             }
             else if(computerScore === playerScore){
-                return "its a draw and noone won"
+                return{
+                    message: "its a draw and noone won"};
             }
         }
     }
-console.log(announceResult())
+    const getAnnounceResult = announceResult();
+    let finalResult = getAnnounceResult.message;
+console.log(finalResult)
 } 
 
 
