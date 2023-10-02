@@ -23,7 +23,8 @@ for(let i = 0; i< rounds; i++){
             else if 
             (computerSelection.substr(1) === "scissors" && playerSelection === "rock"){
                 return "you won, rock beats scissors";
-                playerScore++;
+                let playerScore = playerScore++;
+                
                 
             }
             else if (computerSelection.substr(1) === "rock" && playerSelection === "paper"){
@@ -60,7 +61,7 @@ console.log(computerScore)
 console.log(i)
     }
     function announceResult(playerScore,computerScore){
-        if(i=4){
+        if(i=rounds-1){
             if(playerScore > computerScore){
                 return "you smashed the computer and won"
             }
