@@ -1,6 +1,6 @@
 const selection = ["rock","paper","scissors"];
 const playerChoice = "rock";
-const computerSelection = computerChoice(selection);
+let computerSelection = computerChoice(selection);
 let playerSelection = playerChoice.toLowerCase();
 let playerScore = 0;
 let computerScore = 0;
@@ -37,16 +37,6 @@ function playRound(computerSelection, playerSelection){
         else "error"
 }
 
-function game(rounds){
-    for(let rounds = 0; rounds < 5; rounds++)
-        //prompt(`Choose between ${selection}`)
-        if(playRound(computerSelection, playerSelection).substring(0,7)==="you won"){
-            return playerScore++
-        }
-        else if(playRound(computerSelection,playerSelection).substring(0,8)=== "you lost"){
-            return computerScore++
-        }
-        else ""
-}
+
 console.log(computerSelection, playerSelection)
-console.log(playRound())
+console.log(playRound(computerSelection, playerSelection))
