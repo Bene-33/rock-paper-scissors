@@ -65,7 +65,9 @@ function game(){
     }
 
     //announce the game winner 
-    function announceResult(pScore, cScore){
+    function announceResult(){
+        let pScore = playerScore;
+        let cScore = computerScore;
         if(i=rounds-1){
             if(pScore > cScore){
                 return "you smashed the computer and won"
@@ -78,7 +80,7 @@ function game(){
             }
         }
     }
-console.log(announceResult(playerScore, computerScore))
+console.log(announceResult())
 } 
 
 
