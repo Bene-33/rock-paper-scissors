@@ -10,7 +10,7 @@ function game(){
     for(let i = 0; i< rounds; i++){
         const selection = [" rock"," paper"," scissors"]; // space to use it with the player prompt 
         let playerChoice = "rock"; //prompt(`Choose between${selection} and beat the computer`,"")
-        let computerSelection = " scissors" //computerChoice(selection);
+        let computerSelection = computerChoice(selection);
         let playerSelection = playerChoice.toLowerCase();
 
         //this function pseudo random select a computer result
@@ -22,7 +22,8 @@ function game(){
         //game function to select who beets who
         function playRound(){
             if (computerSelection.substr(1) === playerSelection){
-                return "draw"
+                return{
+                    message: "draw"};
                 }
                 else if 
                 (computerSelection.substr(1) === "scissors" && playerSelection === "rock"){
