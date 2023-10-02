@@ -10,7 +10,7 @@ function game(){
     for(let i = 0; i< rounds; i++){
         const selection = [" rock"," paper"," scissors"]; // space to use it with the player prompt 
         let playerChoice = "rock"; //prompt(`Choose between${selection} and beat the computer`,"")
-        let computerSelection = computerChoice();
+        let computerSelection = " scissors" //computerChoice();
         let playerSelection = playerChoice.toLowerCase();
 
         //this function pseudo random select a computer result
