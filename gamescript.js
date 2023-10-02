@@ -3,8 +3,8 @@ const rounds = 5;
 
 function game(){
 
-    let playerScore = 0;
-    let computerScore = 0;
+    let playerScore = 3;
+    let computerScore = 1;
 
     // play 'rounds' of the game
     for(let i = 0; i< rounds; i++){
@@ -12,6 +12,7 @@ function game(){
         let playerChoice = "rock"; //prompt(`Choose between${selection} and beat the computer`,"")
         let computerSelection = " scissors"//computerChoice(selection);
         let playerSelection = playerChoice.toLowerCase();
+        let score;
 
 
         //this function pseudo random select a computer result
@@ -24,14 +25,10 @@ function game(){
         function playRound(computerSelection, playerSelection){
             if (computerSelection.substr(1) === playerSelection){
                 return "draw"
-            }
+                }
                 else if 
                 (computerSelection.substr(1) === "scissors" && playerSelection === "rock"){
                     return "you won, rock beats scissors";
-                    let pScore = score++;
-                    playerScore = pScore;
-
-
 
                 }
                 else if (computerSelection.substr(1) === "rock" && playerSelection === "paper"){
@@ -58,29 +55,29 @@ function game(){
                     return "something went wrong";
                 }
 
-            }
-        
+        }
 
     console.log(computerSelection, playerSelection)
     console.log(playRound(computerSelection, playerSelection))
     console.log(playerScore)
     console.log(computerScore)
     console.log(i)
-    }   
-        //announce the game winner 
-        function announceResult(playerScore,computerScore){
-            if(i=rounds-1){
-                if(playerScore > computerScore){
-                    return "you smashed the computer and won"
-                }
-                else if(computerScore > playerScore){
-                    return "the computer smashed you and won"
-                }
-                else if(computerScore === playerScore){
-                    return "its a draw and noone won"
-                }
+    }
+
+    //announce the game winner 
+    function announceResult(pScore, cScore){
+        if(i=rounds-1){
+            if(pScore > cScore){
+                return "you smashed the computer and won"
+            }
+            else if(cScore > pScore){
+                return "the computer smashed you and won"
+            }
+            else if(cScore === pScore){
+                return "its a draw and noone won"
             }
         }
+    }
 console.log(announceResult(playerScore, computerScore))
 } 
 
