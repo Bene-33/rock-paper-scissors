@@ -102,7 +102,7 @@ function game(){
     }
     const getAnnounceResult = announceResult();
     let finalResult = getAnnounceResult.message;
-console.log(finalResult)
+    console.log(finalResult)
 } 
 
 
