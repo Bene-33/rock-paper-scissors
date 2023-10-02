@@ -1,5 +1,7 @@
+const rounds = 5;
+
 function game(){
-for(let i = 0; i<5; i++){
+for(let i = 0; i< rounds; i++){
     const selection = [" rock"," paper"," scissors"];
     let playerChoice = prompt(`Choose between${selection} and beat the computer`,"")
     let computerSelection = computerChoice(selection);
