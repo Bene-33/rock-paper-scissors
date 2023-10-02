@@ -35,7 +35,10 @@ function playRound(computerSelection, playerSelection){
         else if (computerSelection.substr(1) === "scissors" && playerSelection === "paper"){
             return "you lost, scissors beats paper";
         }
-        else "error"
+        else {
+            return "something went wrong";
+        }
+
 }
 
 console.log(computerSelection, playerSelection)
