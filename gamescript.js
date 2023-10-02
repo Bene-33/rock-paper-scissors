@@ -1,5 +1,5 @@
 const selection = ["rock","paper","scissors"];
-const playerChoice = "scissors"
+const playerChoice = "rock"
 const cChoice = computerChoice(selection);
 let pChoice = playerChoice.toLowerCase();
 
@@ -23,11 +23,17 @@ function playRound(cChoice, pChoice){
         else if (cChoice === "paper" && pChoice === "scissors"){
             return "you won, scissors beats paper";
         }
-    else {
-        return "computer won"
-    }
+        else if (cChoice === "rock" && pChoice === "scissors"){
+            return "you lost, rock beats scissors";
+        }
+        else if (cChoice === "paper" && pChoice === "rock"){
+            return "you lost, paper beats rock";
+        }
+        else if (cChoice === "scissors" && pChoice === "paper"){
+            return "you lost, scissors beats paper";
+        }
+        else "error"
 }
 
-console.log(cChoice)
-console.log(pChoice)
+console.log(cChoice, pChoice)
 console.log(playRound(cChoice, pChoice))
