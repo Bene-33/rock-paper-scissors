@@ -5,8 +5,8 @@ let computerScore = 0;
 function game(){
 
     // play [rounds] of the game
-    for(let i = 0; i< rounds; i++){
-        const selection = [" rock"," paper"," scissors"]; // space to use it with the player prompt 
+    for(let i = 0; i < rounds; i++){
+        const selection = [" rock"," paper"," scissors"]; // space to use it with the player prompt
         let playerChoice = prompt(`Choose between${selection} and beat the computer`,"");
         let computerSelection = computerChoice();
         let playerSelection = playerChoice.toLowerCase();
