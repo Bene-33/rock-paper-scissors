@@ -5,4 +5,4 @@ let button = document.querySelector('button');
 
 
 
-button.addEventListener('onclick', playRound)
+rock.addEventListener('onclick', playRound('rock'))
