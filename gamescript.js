@@ -2,6 +2,23 @@ const rounds = 5;
 let playerScore = 0;
 let computerScore = 0;
 
+const buttonRock = document.querySelector('#buttonRock');
+const buttonPaper = document.querySelector('#buttonPaper');
+const buttonScissors = document.querySelector('#buttonScissors')
+
+buttonRock.addEventListener('click', () => {
+    
+})
+
+buttonPaper.addEventListener('click', () => {
+    
+})
+
+buttonScissors.addEventListener('click', () => {
+    
+})
+
+
 function game(){
 
     // play [rounds] of the game
