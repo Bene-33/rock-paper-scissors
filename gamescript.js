@@ -85,13 +85,12 @@ let roundResult = getRoundResult.message;
 
 console.log(roundResult)
 console.log(computerSelection, playerSelection)
-console.log(i)
 console.log(playerScore)
 console.log(computerScore)
 
 //announce the game winner 
 function announceResult(){
-    if(i=rounds-1){
+    if(i=rounds-1){ //
         if(playerScore > computerScore){
             return{
                 message: "you smashed the computer and won",
