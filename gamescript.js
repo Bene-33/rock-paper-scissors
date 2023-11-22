@@ -83,10 +83,10 @@ function playRound(){
 const getRoundResult = playRound();
 let roundResult = getRoundResult.message;
 
-console.log(roundResult)
-console.log(computerSelection, playerSelection)
-console.log(playerScore)
-console.log(computerScore)
+console.log("Rundenergebnis:", roundResult)
+console.log("PcAuswahl:", computerSelection, "SpielerAuswahl:", playerSelection)
+console.log("SpielerScore:", playerScore)
+console.log("ComputerScore:", computerScore)
 
 //announce the game winner 
 function announceResult(){
