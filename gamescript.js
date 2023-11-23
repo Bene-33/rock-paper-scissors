@@ -2,7 +2,7 @@ const rounds = 5;
 let playerScore = 0;
 let computerScore = 0;
 
-const selection = [" rock"," paper"," scissors"]; // space to use it with the player prompt
+const selection = ["rock","paper","scissors"]; 
 let playerChoice = "";
 let computerSelection = computerChoice();
 let playerSelection = playerChoice.toLowerCase();
@@ -13,7 +13,7 @@ const buttonPaper = document.querySelector('#buttonPaper');
 const buttonScissors = document.querySelector('#buttonScissors')
 
 buttonRock.addEventListener('click', () => {
-    
+    playerChoice = "rock";
 })
 
 buttonPaper.addEventListener('click', () => {
@@ -31,43 +31,43 @@ function computerChoice() {
     }
 
 //game function to select who beets who
-function playRound(){
-    if (computerSelection.substr(1) === playerSelection){
+function playRound(playerSelection, computerSelection){
+    if (computerSelection === playerSelection){
         return{
             message: "draw",
         };
     }
-    else if (computerSelection.substr(1) === "scissors" && playerSelection === "rock"){
+    else if (computerSelection === "scissors" && playerSelection === "rock"){
         playerScore++;
         return{
             message: "you won, rock beats scissors",
         };
     }
-    else if (computerSelection.substr(1) === "rock" && playerSelection === "paper"){
+    else if (computerSelection === "rock" && playerSelection === "paper"){
         playerScore++;
         return{
             message: "you won, paper beats rock",
         };
     }
-    else if (computerSelection.substr(1) === "paper" && playerSelection === "scissors"){
+    else if (computerSelection === "paper" && playerSelection === "scissors"){
         playerScore++;
         return{
             message: "you won, scissors beats paper",
         };
     }
-    else if (computerSelection.substr(1) === "rock" && playerSelection === "scissors"){
+    else if (computerSelection === "rock" && playerSelection === "scissors"){
         computerScore++;
         return{
             message: "you lost, rock beats scissors",
         };
     }
-    else if (computerSelection.substr(1) === "paper" && playerSelection === "rock"){
+    else if (computerSelection === "paper" && playerSelection === "rock"){
         computerScore++;
         return{
             message: "you lost, paper beats rock"
         };
     }
-    else if (computerSelection.substr(1) === "scissors" && playerSelection === "paper"){
+    else if (computerSelection === "scissors" && playerSelection === "paper"){
         computerScore++;
         return{
             message: "you lost, scissors beats paper"
