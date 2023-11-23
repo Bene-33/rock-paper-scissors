@@ -3,9 +3,8 @@ let playerScore = 0;
 let computerScore = 0;
 
 const selection = ["rock","paper","scissors"]; 
-// let playerChoice = "";
 let computerSelection = "";
-// let playerSelection = playerChoice.toLowerCase();
+let playerSelection = "";
 
 
 const buttonRock = document.querySelector('#buttonRock');
@@ -16,6 +15,8 @@ buttonRock.addEventListener('click', () => {
     computerChoice();
     playRound(computerSelection, "rock");
     console.log(computerSelection);
+    console.log(playerSelection)
+    console.log(playRound().message);
 })
 
 buttonPaper.addEventListener('click', () => {
@@ -33,7 +34,7 @@ function computerChoice() {
     }
 
 //game function to select who beets who
-function playRound(playerSelection, computerSelection){
+function playRound(){
     if (computerSelection === playerSelection){
         return{
             message: "draw",
