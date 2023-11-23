@@ -3,9 +3,9 @@ let playerScore = 0;
 let computerScore = 0;
 
 const selection = ["rock","paper","scissors"]; 
-let playerChoice = "";
-let computerSelection = computerChoice();
-let playerSelection = playerChoice.toLowerCase();
+// let playerChoice = "";
+let computerSelection = "";
+// let playerSelection = playerChoice.toLowerCase();
 
 
 const buttonRock = document.querySelector('#buttonRock');
@@ -13,7 +13,9 @@ const buttonPaper = document.querySelector('#buttonPaper');
 const buttonScissors = document.querySelector('#buttonScissors')
 
 buttonRock.addEventListener('click', () => {
-    playerChoice = "rock";
+    computerChoice();
+    playRound(computerSelection, "rock");
+    console.log(computerSelection);
 })
 
 buttonPaper.addEventListener('click', () => {
@@ -27,7 +29,7 @@ buttonScissors.addEventListener('click', () => {
 //this function pseudo random select a computer result
 function computerChoice() {
     compChoice = Math.floor(Math.random() * selection.length);
-    return selection[compChoice];
+    computerSelection = selection[compChoice];
     }
 
 //game function to select who beets who
@@ -84,7 +86,7 @@ const getRoundResult = playRound();
 let roundResult = getRoundResult.message;
 
 console.log("Rundenergebnis:", roundResult)
-console.log("PcAuswahl:", computerSelection, "SpielerAuswahl:", playerSelection)
+// console.log("PcAuswahl:", computerSelection, "SpielerAuswahl:", playerSelection)
 console.log("SpielerScore:", playerScore)
 console.log("ComputerScore:", computerScore)
 
