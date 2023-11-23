@@ -12,19 +12,30 @@ const buttonPaper = document.querySelector('#buttonPaper');
 const buttonScissors = document.querySelector('#buttonScissors')
 
 buttonRock.addEventListener('click', () => {
+    playerSelection ="rock";
     computerChoice();
-    playRound(computerSelection, "rock");
+    playRound();
     console.log(computerSelection);
-    console.log(playerSelection)
-    console.log(playRound().message);
+    console.log(playerSelection);
+    console.log(playerScore);
 })
 
 buttonPaper.addEventListener('click', () => {
-    
+    playerSelection ="paper";
+    computerChoice();
+    playRound();    
+    console.log(computerSelection);
+    console.log(playerSelection);
+    console.log(playerScore);
 })
 
 buttonScissors.addEventListener('click', () => {
-    
+    playerSelection ="scissors";
+    computerChoice();
+    playRound();    
+    console.log(computerSelection);
+    console.log(playerSelection);
+    console.log(playerScore);
 })
 
 //this function pseudo random select a computer result
@@ -82,17 +93,9 @@ function playRound(){
         };
     }      
 }
-        
-const getRoundResult = playRound();
-let roundResult = getRoundResult.message;
-
-console.log("Rundenergebnis:", roundResult)
-// console.log("PcAuswahl:", computerSelection, "SpielerAuswahl:", playerSelection)
-console.log("SpielerScore:", playerScore)
-console.log("ComputerScore:", computerScore)
 
 //announce the game winner 
-function announceResult(){
+function announceFinalResult(){
     if(i=rounds-1){ //
         if(playerScore > computerScore){
             return{
@@ -111,6 +114,3 @@ function announceResult(){
         }
     }
 }
-const getAnnounceResult = announceResult();
-let finalResult = getAnnounceResult.message;
-console.log(finalResult)
