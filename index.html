@@ -9,17 +9,32 @@
 </head>
 <body>
     <h1>Play a Round of rock paper scissors</h1>
-    <p> Choose wisely and beat the computer</p>
+    <h2> Choose wisely and beat the computer</h2>
     <div class = 'buttons'>
         <button id = "buttonRock">Rock</button>
         <button id = "buttonPaper">Paper</button>
         <button id = "buttonScissors">Scissors</button>
     </div>
-    <div id = "playerSelection"></div>
-    <div id = "computerSelection"></div>
-    <div id = "playerScore"></div>
-    <div id = "computerScore"></div>
-    <div class = 'roundResult'></div>
-    <div class ='finalResult'></div>
+    <div class = "selection">
+        <div>Player Selected</div>
+        <span id = "playerSelection"></span>
+    </div>
+    <div class = "selection">
+        <div> Computer Selected</div>
+        <span id = "computerSelection"></span>
+    </div>
+    <div>
+        <h3>Scores</h3>
+        <div class = "scores">
+            <div>Player Score</div>
+            <span id = "playerScore"></span>
+        </div>
+        <div class = "scores">
+            <div>Computer Score</div>
+            <span id = "computerScore"></span>
+        </div>
+    </div>  
+    <span id = 'roundResult'></span>
+    <span id ='finalResult'></span>
 </body>
 </html>
