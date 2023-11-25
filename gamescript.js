@@ -10,11 +10,11 @@ let playerSelection = "";
 const buttonRock = document.querySelector('#buttonRock');
 const buttonPaper = document.querySelector('#buttonPaper');
 const buttonScissors = document.querySelector('#buttonScissors');
-
 const showPlayerSelection = document.querySelector('#playerSelection');
 const showComputerSelection = document.querySelector('#computerSelection');
 const showPlayerScore = document.querySelector('#playerScore');
 const showComputerScore = document.querySelector('#computerScore');
+const showRoundResult = document.querySelector('#roundResult');
 
 buttonRock.addEventListener('click', () => {
     playerSelection ="rock";
@@ -24,6 +24,7 @@ buttonRock.addEventListener('click', () => {
     showComputerSelection.textContent = computerSelection;
     showPlayerScore.textContent = playerScore;
     showComputerScore.textContent = computerScore;
+    showRoundResult.textContent = playRound().message
 
 });
 
@@ -35,6 +36,7 @@ buttonPaper.addEventListener('click', () => {
     showComputerSelection.textContent = computerSelection;
     showPlayerScore.textContent = playerScore;
     showComputerScore.textContent = computerScore;
+    showRoundResult.textContent = playRound().message
 });
 
 buttonScissors.addEventListener('click', () => {
@@ -45,6 +47,7 @@ buttonScissors.addEventListener('click', () => {
     showComputerSelection.textContent = computerSelection;
     showPlayerScore.textContent = playerScore;
     showComputerScore.textContent = computerScore;
+    showRoundResult.textContent = playRound().message
 });
 
 //this function pseudo random select a computer result
