@@ -15,6 +15,7 @@ const showComputerSelection = document.querySelector('#computerSelection');
 const showPlayerScore = document.querySelector('#playerScore');
 const showComputerScore = document.querySelector('#computerScore');
 const showRoundResult = document.querySelector('#roundResult');
+const showFinalResult = document.querySelector('#finalResult');
 
 buttonRock.addEventListener('click', () => {
     playerSelection ="rock";
@@ -25,8 +26,7 @@ buttonRock.addEventListener('click', () => {
     showComputerSelection.textContent = computerSelection;
     showPlayerScore.textContent = playerScore;
     showComputerScore.textContent = computerScore;
-    showRoundResult.textContent = playRound().message
-
+    showRoundResult.textContent = playRound().message;
 });
 
 buttonPaper.addEventListener('click', () => {
@@ -38,7 +38,7 @@ buttonPaper.addEventListener('click', () => {
     showComputerSelection.textContent = computerSelection;
     showPlayerScore.textContent = playerScore;
     showComputerScore.textContent = computerScore;
-    showRoundResult.textContent = playRound().message
+    showRoundResult.textContent = playRound().message;
 });
 
 buttonScissors.addEventListener('click', () => {
@@ -50,7 +50,7 @@ buttonScissors.addEventListener('click', () => {
     showComputerSelection.textContent = computerSelection;
     showPlayerScore.textContent = playerScore;
     showComputerScore.textContent = computerScore;
-    showRoundResult.textContent = playRound().message
+    showRoundResult.textContent = playRound().message;
 });
 
 //this function pseudo random select a computer result
@@ -113,10 +113,12 @@ function playRound(){
 function announceFinalResult(){
     if (playerScore === 5 || computerScore === 5){
         if (playerScore > computerScore){
-            alert("you won and smashed the computer")
+            showFinalResult.textContent = "you won and smashed the computer"
         }
+
         else if(computerScore > playerScore){
-            alert("you lost and got smashed")
+            showFinalResult.textContent = "you lost and got smashed"
         }
+        
     }
 }
