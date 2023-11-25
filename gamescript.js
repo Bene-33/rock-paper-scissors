@@ -20,6 +20,7 @@ buttonRock.addEventListener('click', () => {
     playerSelection ="rock";
     computerChoice();
     playRound();
+    announceFinalResult();
     showPlayerSelection.textContent ="Rock";
     showComputerSelection.textContent = computerSelection;
     showPlayerScore.textContent = playerScore;
@@ -32,6 +33,7 @@ buttonPaper.addEventListener('click', () => {
     playerSelection ="paper";
     computerChoice();
     playRound();
+    announceFinalResult();
     showPlayerSelection.textContent ="Paper";
     showComputerSelection.textContent = computerSelection;
     showPlayerScore.textContent = playerScore;
@@ -43,6 +45,7 @@ buttonScissors.addEventListener('click', () => {
     playerSelection ="scissors";
     computerChoice();
     playRound();
+    announceFinalResult();
     showPlayerSelection.textContent ="Scissors";
     showComputerSelection.textContent = computerSelection;
     showPlayerScore.textContent = playerScore;
@@ -108,21 +111,12 @@ function playRound(){
 
 //announce the game winner 
 function announceFinalResult(){
-    if(i=rounds-1){ //
-        if(playerScore > computerScore){
-            return{
-                message: "you smashed the computer and won",
-            };
+    if (playerScore === 5 || computerScore === 5){
+        if (playerScore > computerScore){
+            alert("you won and smashed the computer")
         }
         else if(computerScore > playerScore){
-            return{
-                message: "the computer smashed you and won",
-            };
-        }
-        else if(computerScore === playerScore){
-            return{
-                message: "its a draw and noone won",
-            };
+            alert("you lost and got smashed")
         }
     }
 }
