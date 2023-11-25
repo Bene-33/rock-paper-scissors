@@ -9,34 +9,43 @@ let playerSelection = "";
 
 const buttonRock = document.querySelector('#buttonRock');
 const buttonPaper = document.querySelector('#buttonPaper');
-const buttonScissors = document.querySelector('#buttonScissors')
+const buttonScissors = document.querySelector('#buttonScissors');
+
+const showPlayerSelection = document.querySelector('#playerSelection');
+const showComputerSelection = document.querySelector('#computerSelection');
+const showPlayerScore = document.querySelector('#playerScore');
+const showComputerScore = document.querySelector('#computerScore');
 
 buttonRock.addEventListener('click', () => {
     playerSelection ="rock";
     computerChoice();
     playRound();
-    console.log(computerSelection);
-    console.log(playerSelection);
-    console.log(playerScore);
-})
+    showPlayerSelection.textContent ="Rock";
+    showComputerSelection.textContent = computerSelection;
+    showPlayerScore.textContent = playerScore;
+    showComputerScore.textContent = computerScore;
+
+});
 
 buttonPaper.addEventListener('click', () => {
     playerSelection ="paper";
     computerChoice();
-    playRound();    
-    console.log(computerSelection);
-    console.log(playerSelection);
-    console.log(playerScore);
-})
+    playRound();
+    showPlayerSelection.textContent ="Paper";
+    showComputerSelection.textContent = computerSelection;
+    showPlayerScore.textContent = playerScore;
+    showComputerScore.textContent = computerScore;
+});
 
 buttonScissors.addEventListener('click', () => {
     playerSelection ="scissors";
     computerChoice();
-    playRound();    
-    console.log(computerSelection);
-    console.log(playerSelection);
-    console.log(playerScore);
-})
+    playRound();
+    showPlayerSelection.textContent ="Scissors";
+    showComputerSelection.textContent = computerSelection;
+    showPlayerScore.textContent = playerScore;
+    showComputerScore.textContent = computerScore;
+});
 
 //this function pseudo random select a computer result
 function computerChoice() {
