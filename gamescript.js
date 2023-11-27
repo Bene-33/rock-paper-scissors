@@ -113,11 +113,15 @@ function playRound(){
 function announceFinalResult(){
     if (playerScore === 5 || computerScore === 5){
         if (playerScore > computerScore){
-            showFinalResult.textContent = "you won and smashed the computer"
+            showFinalResult.textContent = "you won and smashed the computer";
+            playerScore = 0;
+            computerScore = 0;
         }
 
         else if(computerScore > playerScore){
-            showFinalResult.textContent = "you lost and got smashed"
+            showFinalResult.textContent = "you lost and got smashed";
+            playerScore = 0;
+            computerScore = 0;
         }
         
     }
