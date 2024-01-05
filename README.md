@@ -2,4 +2,4 @@
 
 a simple rock paper scissors game 
 
-[Preview](bene-33.github.io/rock-paper-scissors)
+[Preview](https://bene-33.github.io/rock-paper-scissors/)
